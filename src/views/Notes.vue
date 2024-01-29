@@ -36,7 +36,7 @@
       </v-card>
     </v-dialog>
 
-    <v-btn @click="criarNovaAnotacao" color="primary">+ Criar Anotação</v-btn>
+    <v-btn @click="criarNovaAnotacao" color="#004d40" class="white--text">+ Criar Anotação</v-btn>
   </v-container>
 </template>
 

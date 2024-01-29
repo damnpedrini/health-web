@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <!-- Menu lateral -->
-    <v-navigation-drawer app dark color="blue" v-model="drawer">
+    <v-navigation-drawer app dark color="#004d40" v-model="drawer">
       <v-list>
         <v-list-item to="/HomePage" class="nav-link">Página Inicial</v-list-item>
         <v-list-item to="/Notes" class="nav-link">Anotações</v-list-item>
@@ -11,11 +11,11 @@
     </v-navigation-drawer>
 
     <!-- Botão para abrir o menu lateral -->
-    <v-app-bar app dark color="blue">
+    <v-app-bar app dark color="#004d40">
       <v-btn icon @click="drawer = !drawer">
         <v-icon>mdi-menu</v-icon>
       </v-btn>
-      <v-toolbar-title class="logo">Bloco de Anotações</v-toolbar-title>
+      <v-toolbar-title class="logo">Health Web</v-toolbar-title>
     </v-app-bar>
 
     <v-main>
@@ -56,14 +56,12 @@ export default {
   text-decoration: underline;
 }
 
-/* Estilizar o link ativo */
 .nav-link.router-link-active {
   background-color: #555;
   font-weight: bold;
 }
 
-/* Adicione padding à esquerda para afastar o conteúdo da barra lateral */
 .v-main {
-  padding-left: 300px; /* Ajuste conforme necessário */
+  padding-left: 300px; 
 }
 </style>

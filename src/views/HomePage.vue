@@ -8,7 +8,7 @@
             <li v-for="(anotacao, index) in anotacoes" :key="index">{{ anotacao }}</li>
           </ul>
           <div class="botao-container text-center">
-            <v-btn @click="navegarParaNovaPagina" color="blue darken-2" class="white--text">+ Criar Anotação</v-btn>
+            <v-btn @click="navegarParaNovaPagina" color="#004d40" class="white--text">+ Criar Anotação</v-btn>
           </div>
         </v-col>
       </v-row>
