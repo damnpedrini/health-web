@@ -5,7 +5,7 @@
       <v-list>
         <v-list-item to="/HomePage" class="nav-link">Página Inicial</v-list-item>
         <v-list-item to="/Notes" class="nav-link">Anotações</v-list-item>
-        <v-list-item to="/about" class="nav-link">Sobre</v-list-item>
+        <v-list-item to="/CalculatorPage" class="nav-link">Calculadora</v-list-item>
         <!-- Adicione outros links conforme necessário -->
       </v-list>
     </v-navigation-drawer>
