@@ -15,7 +15,14 @@
       <v-btn icon @click="drawer = !drawer">
         <v-icon>mdi-menu</v-icon>
       </v-btn>
-      <v-toolbar-title class="logo">Health Web</v-toolbar-title>
+      <v-toolbar-title class="logo">
+        <i class="fa-solid fa-heart-pulse"></i> Health Web
+      </v-toolbar-title>
+      <v-spacer></v-spacer> <!-- Adiciona um espaço flexível para alinhar à direita -->
+
+      <!-- Botões Entrar e Registrar com estilo personalizado -->
+      <v-btn text class="custom-btn" @click="$router.push('/TelaLogin')">Entrar</v-btn>
+      <v-btn text class="custom-btn">Registrar</v-btn>
     </v-app-bar>
 
     <v-main>
@@ -43,15 +50,17 @@ export default {
   font-size: 1.5em;
 }
 
-.nav-link {
-  color: black; 
+.custom-btn {
+  color: white;
+  font-family: 'YourDesiredFont', sans-serif; /* Substitua 'YourDesiredFont' pela fonte desejada */
+  font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
   text-decoration: none;
   padding: 8px 12px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
-.nav-link:hover {
+.custom-btn:hover {
   background-color: #555;
   text-decoration: underline;
 }
