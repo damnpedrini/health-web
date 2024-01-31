@@ -1,6 +1,6 @@
 <template>
   <v-container>
-    <h1>Todas as Anotações</h1>
+    <h1>Todas as Refeições</h1>
 
     <v-list>
       <v-list-item-group v-if="anotacoes.length > 0">
