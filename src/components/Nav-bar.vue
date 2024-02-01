@@ -22,7 +22,7 @@
 
       <!-- Botões Entrar e Registrar com estilo personalizado -->
       <v-btn text class="custom-btn" @click="$router.push('/TelaLogin')">Entrar</v-btn>
-      <v-btn text class="custom-btn">Registrar</v-btn>
+      <v-btn text class="custom-btn" @click="$router.push('/Register')">Registrar</v-btn>
     </v-app-bar>
 
     <v-main>
