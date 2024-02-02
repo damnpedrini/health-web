@@ -7,6 +7,7 @@ import Notes from '../views/Notes.vue';
 import EditNote from '../views/EditNote.vue'; 
 import CalculatorPage from '../views/CalculatorPage.vue';
 import TelaLogin from '../views/TelaLogin.vue';
+import Register from '../views/Register.vue';
 
 
 Vue.use(VueRouter);
@@ -18,6 +19,7 @@ const routes = [
   { path: '/editar-nota/:id', name: 'editar-nota', component: EditNote },
   { path: '/CalculatorPage', component: CalculatorPage },
   { path: '/TelaLogin', component: TelaLogin },
+  { path: '/Register', component: Register },
 ];
 
 
