@@ -34,7 +34,7 @@ Bem-vindo ao Health Web, o aplicativo de saúde desenvolvido pela Sakura Code Pr
    - Configure seu perfil com informações sobre preferências alimentares, alergias e objetivos de saúde.
 
 7. **Compartilhe Suas Conquistas:**
-   - Compartilhe suas escolhas saudáveis e conquistas no Sakura Health com amigos e familiares.
+   - Compartilhe suas escolhas saudáveis e conquistas no Health Web com amigos e familiares.
 
 ## Tecnologias Utilizadas
 
@@ -43,7 +43,7 @@ Bem-vindo ao Health Web, o aplicativo de saúde desenvolvido pela Sakura Code Pr
 - JavaScript
 - HTML
 - CSS
-- GIT BASH
+
 
 
 ## Feedback e Suporte
