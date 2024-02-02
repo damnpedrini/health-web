@@ -2,9 +2,9 @@
   <v-container fluid class="login-container">
     <v-row justify="center" align="center">
       <v-col cols="12" sm="8" md="4">
-        <v-card elevation="2">
+        <v-card class="elevation-12" shaped>
           <v-card-title class="text-center">
-            <h2 class="headline">Login</h2>
+            <h2 class="headline font-weight-bold">Sign In</h2>
           </v-card-title>
 
           <v-card-text>
@@ -28,11 +28,11 @@
 
               <v-btn
                 type="submit"
-                color="green"
-                class="mx-auto mt-4"
+                color="#004d40" 
+                class="white--text mx-auto mt-4"
                 large
               >
-                Login
+                Sign In
               </v-btn>
             </v-form>
           </v-card-text>
@@ -53,7 +53,7 @@ export default {
   methods: {
     login() {
       // Adicione lógica de login aqui
-      console.log('Login with:', this.username, this.password);
+      console.log('Sign in with:', this.username, this.password);
     },
   },
 };
@@ -67,7 +67,17 @@ export default {
   justify-content: center;
 }
 
-v-btn {
+.v-card {
+  background-color: #fff;
+  border-radius: 10px; 
+  overflow: hidden;
+}
+
+.v-card-title h2 {
+  color: #004d40; 
+}
+
+.v-btn {
   width: 100%;
 }
 </style>
