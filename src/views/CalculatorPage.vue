@@ -6,16 +6,18 @@
 
     <section class="mx-auto mt-5 p-4" style="max-width: 400px; text-align: center;">
       <div class="mb-3">
-        <label for="txtaltura" class="form-label">Altura:</label>
+        <label for="txtaltura" class="form-label">Altura: </label>
         <input v-model="altura" @input="formatarAltura" type="text" class="form-control" id="txtaltura">
       </div>
 
       <div class="mb-3">
-        <label for="txtpeso" class="form-label">Peso:</label>
+        <label for="txtpeso" class="form-label">Peso: </label>
         <input v-model="peso" type="number" class="form-control" id="txtpeso" min="0">
       </div>
 
-      <button @click="calcularIMC" class="btn btn-success">Verificar</button>
+      <v-btn @click="calcularIMC" color="#004d40" class="white--text">
+        Verificar
+      </v-btn>
     </section>
 
     <div id="res" class="mt-4 text-center">
@@ -91,16 +93,9 @@ section {
   border-radius: 5px;
 }
 
-.btn-success {
-  background-color: #004d40;
-  color: #fff;
-  border: none;
-  padding: 10px;
+.v-btn {
   border-radius: 5px;
-  cursor: pointer;
+  margin-top: 20px;
 }
 
-.btn-success:hover {
-  background-color: #45a049;
-}
 </style>
