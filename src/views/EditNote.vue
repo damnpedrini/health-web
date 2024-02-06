@@ -28,17 +28,17 @@ export default {
         const nota = await getNote("notesDB", "notes", this.idNota);
         this.conteudo = nota.content;
       } catch (error) {
-        console.error("Erro ao obter detalhes da nota do IndexedDB", error);
+        console.error("Erro ao obter detalhes da refeição do IndexedDB", error);
       }
     },
     async salvarEdicao() {
       try {
         await updateNote("notesDB", "notes", this.idNota, { content: this.conteudo });
-        console.log("Nota atualizada com sucesso!");
+        console.log("Refeição atualizada com sucesso!");
 
         this.$router.push('/HomePage');
       } catch (error) {
-        console.error("Erro ao salvar a edição da nota no IndexedDB", error);
+        console.error("Erro ao salvar a refeição da nota no IndexedDB", error);
       }
     },
   },

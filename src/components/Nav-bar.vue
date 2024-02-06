@@ -1,3 +1,5 @@
+<!-- src/components/NavBar.vue -->
+
 <template>
   <v-app>
     <!-- Menu lateral -->
@@ -18,11 +20,25 @@
       <v-toolbar-title class="logo">
         <i class="fa-solid fa-heart-pulse"></i> Health Web
       </v-toolbar-title>
-      <v-spacer></v-spacer> <!-- Adiciona um espaço flexível para alinhar à direita -->
+      <v-spacer></v-spacer>
 
-      <!-- Botões Entrar e Registrar com estilo personalizado -->
-      <v-btn text class="custom-btn" @click="$router.push('/TelaLogin')">Entrar</v-btn>
-      <v-btn text class="custom-btn" @click="$router.push('/Register')">Registrar</v-btn>
+      <!-- Botão de Notificações -->
+      <v-dialog v-model="showNotificationsDialog" max-width="600px">
+        <template v-slot:activator="{ on }">
+          <v-btn icon v-on="on" @click="mostrarNotificacao">
+            <v-icon>mdi-bell</v-icon>
+          </v-btn>
+        </template>
+        
+        <v-card>
+          <v-card-title>Notificações</v-card-title>
+          <!-- Adicione aqui o conteúdo das notificações -->
+          <!-- Exemplo: <v-card-text>{{ notificacoes }}</v-card-text> -->
+          <v-card-actions>
+            <v-btn @click="fecharDialog">Fechar</v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
     </v-app-bar>
 
     <v-main>
@@ -34,12 +50,30 @@
 </template>
 
 <script>
+import NotificacoesService from '@/services/notificacoesService'; // Ajuste o caminho conforme necessário
+
 export default {
   name: "NavBar",
   data() {
     return {
       drawer: false,
+      showNotificationsDialog: false,
     };
+  },
+  methods: {
+    fecharDialog() {
+      this.showNotificationsDialog = false;
+    },
+    mostrarNotificacao() {
+      // Suponha que você tenha um estado ou variável que rastreia a quantidade consumida e a meta (2 litros).
+      const quantidadeConsumida = 1500; // Substitua pelo valor real consumido
+      const metaDiaria = 2000;
+
+      const quantidadeRestante = metaDiaria - quantidadeConsumida;
+      NotificacoesService.incentivarConsumoAgua(quantidadeRestante);
+
+      this.showNotificationsDialog = false; // Fechar o popup após acionar a notificação
+    },
   },
 };
 </script>
@@ -50,20 +84,7 @@ export default {
   font-size: 1.5em;
 }
 
-.custom-btn {
-  color: white;
-  font-family: 'YourDesiredFont', sans-serif; /* Substitua 'YourDesiredFont' pela fonte desejada */
-  font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
-  text-decoration: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.custom-btn:hover {
-  background-color: #555;
-  text-decoration: underline;
-}
+/* Adicione outros estilos conforme necessário */
 
 .nav-link.router-link-active {
   background-color: #555;
